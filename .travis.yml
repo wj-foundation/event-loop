@@ -5,8 +5,8 @@ php:
   - nightly
 
 env:
-  - LIBEVENT_DISABLED=true
-  - LIBEVENT_DISABLED=false
+  - LIBEVENT_ENABLED=true
+  - LIBEVENT_ENABLED=false
 
 before_script:
   - composer install
@@ -14,3 +14,4 @@ before_script:
 
 script:
   - ./run-tests.sh
+  - phpunit
