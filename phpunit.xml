@@ -2,6 +2,8 @@
     <testsuites>
         <testsuite name="event-loop">
             <directory>tests</directory>
+            <exclude>tests/CreateStreamSelectLoopTest.php</exclude>
+            <exclude>tests/CreateLibEventLoopTest.php</exclude>
         </testsuite>
     </testsuites>
 </phpunit>
