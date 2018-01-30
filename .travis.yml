@@ -10,6 +10,7 @@ env:
 
 before_script:
   - composer install
+  - chmod +x ./run-tests.sh
 
 script:
   - ./run-tests.sh
