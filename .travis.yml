@@ -10,4 +10,6 @@ env:
 
 before_script:
   - composer install
-  - if ["$LIBEVENT_DISABLED" = false]; then phpenv config-rm xdebug.ini && phpunit tests/CreateStreamSelectLoopTest.php else phpunit tests/CreateLibEventLoopTest.php fi
+
+script:
+  - ./run-tests.sh
