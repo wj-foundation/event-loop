@@ -10,12 +10,8 @@ env:
 
 before_script:
   - composer install
-  - echo extension=mongo.so >> ./libevent.ini
   - chmod +x ./run-tests.sh
 
 script:
   - ./run-tests.sh
   - phpunit
-
-after_script:
-  - rm ./libevent.ini

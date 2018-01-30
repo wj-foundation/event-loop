@@ -4,6 +4,6 @@ set -ev
 if [ "${LIBEVENT_ENABLED}" = "false" ]; then
     phpunit tests/CreateStreamSelectLoopTest.php
 else
-    phpenv config-add libevent.ini
+    pecl install -f libevent
     phpunit tests/CreateLibEventLoopTest.php
 fi
