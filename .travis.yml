@@ -8,10 +8,18 @@ env:
   - LIBEVENT_ENABLED=true
   - LIBEVENT_ENABLED=false
 
+before_install:
+  - chmod +x ./scripts/install-libevent.sh
+  - chmod +x ./scripts/install-libevent-extension.sh
+  - chmod +x ./scripts/run-tests.sh
+
+install:
+  - if [[ "$LIBEVENT_ENABLED" == "true" ]]; ./scripts/install-libevent.sh; fi
+  - if [[ "$LIBEVENT_ENABLED" == "true" ]]; ./scripts/install-libevent-extension.sh; fi
+
 before_script:
   - composer install
-  - chmod +x ./run-tests.sh
 
 script:
-  - ./run-tests.sh
+  - ./scripts/run-tests.sh
   - phpunit
