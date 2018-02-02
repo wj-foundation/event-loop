@@ -3,5 +3,5 @@ wget https://github.com/libevent/libevent/releases/download/release-2.0.22-stabl
 tar zxvf libevent-2.0.22-stable.tar.gz
 cd libevent-2.0.22-stable/
 ./configure --prefix=/usr/local/libevent-2.0.22-stable/
-make
-make install
+sudo make
+sudo make install
