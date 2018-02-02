@@ -14,8 +14,8 @@ before_install:
   - chmod +x ./scripts/run-tests.sh
 
 install:
-  - if [[ "$LIBEVENT_ENABLED" == "true" ]]; ./scripts/install-libevent.sh; fi
-  - if [[ "$LIBEVENT_ENABLED" == "true" ]]; ./scripts/install-libevent-extension.sh; fi
+  - if [[ "$LIBEVENT_ENABLED" == "true" ]]; then ./scripts/install-libevent.sh; fi
+  - if [[ "$LIBEVENT_ENABLED" == "true" ]]; then ./scripts/install-libevent-extension.sh; fi
 
 before_script:
   - composer install
